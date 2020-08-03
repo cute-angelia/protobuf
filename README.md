@@ -1,3 +1,5 @@
+配合 cute-angelia/mysql-protobuf 使用
+
 ## install
 
 ```

@@ -3,6 +3,8 @@
 ## install
 
 ```
+go get -u github.com/asim/protoc-gen-go-micro@v0.8.0
+
 go get -u github.com/cute-angelia/protobuf/protoc-gen-go
 ```
 

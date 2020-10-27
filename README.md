@@ -3,7 +3,7 @@
 ## install
 
 ```
-go get -u github.com/cute-angelia/protoc-gen-go-micro@v0.8.0
+go get -u github.com/cute-angelia/protoc-gen-micro@v0.8.0
 
 go get -u github.com/cute-angelia/protobuf/protoc-gen-go
 ```

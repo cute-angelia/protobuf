@@ -3,26 +3,12 @@
 ## install
 
 ```
-git clone github.com/cute-angelia/protoc-gen-micro
+git clone https://github.com/cute-angelia/protoc-gen-micro.git
 cd protoc-gen-micro && go install
 
 git clone https://github.com/cute-angelia/protobuf.git
-
 cd protobuf/protoc-gen-go && go install 
 ```
-
-
-
-或者
-
-```
-go get -u github.com/cute-angelia/protoc-gen-micro@v0.8.0
-
-go get -u github.com/cute-angelia/protobuf/protoc-gen-go
-```
-
-
-
 
 
 

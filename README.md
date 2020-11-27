@@ -14,11 +14,11 @@ $ protoc --version
 
 # install protoc-gen-micro
 git clone --depth=1 https://github.com/cute-angelia/protoc-gen-micro.git
-cd protoc-gen-micro && go install
+cd protoc-gen-micro && go install && cd -
 
 # install protoc-gen-go
 git clone --depth=1 https://github.com/cute-angelia/protobuf.git
-cd protobuf/protoc-gen-go && go install 
+cd protobuf/protoc-gen-go && go install && cd -
 ```
 
 

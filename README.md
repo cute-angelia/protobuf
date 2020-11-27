@@ -13,11 +13,11 @@ $ brew install protobuf
 $ protoc --version
 
 # install protoc-gen-micro
-git clone https://github.com/cute-angelia/protoc-gen-micro.git
+git clone --depth=1 https://github.com/cute-angelia/protoc-gen-micro.git
 cd protoc-gen-micro && go install
 
 # install protoc-gen-go
-git clone https://github.com/cute-angelia/protobuf.git
+git clone --depth=1 https://github.com/cute-angelia/protobuf.git
 cd protobuf/protoc-gen-go && go install 
 ```
 

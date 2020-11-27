@@ -3,9 +3,20 @@
 ## install
 
 ```
+# install protoc
+linux:
+apt install -y protobuf-compiler
+protoc --version
+
+macos:
+$ brew install protobuf
+$ protoc --version
+
+# install protoc-gen-micro
 git clone https://github.com/cute-angelia/protoc-gen-micro.git
 cd protoc-gen-micro && go install
 
+# install protoc-gen-go
 git clone https://github.com/cute-angelia/protobuf.git
 cd protobuf/protoc-gen-go && go install 
 ```

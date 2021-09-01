@@ -1,34 +1,53 @@
-可以配合 cute-angelia/mysql-protobuf 使用更加方便，不用也没关系
+> 可以配合 cute-angelia/mysql-protobuf 使用快速生成 proto文件，不用也没关系
 
-## install
+## 安装
 
 ```
-# install protoc
-linux:
+# 一、安装 protoc
+# linux:
 apt install -y protobuf-compiler
 protoc --version
 
-macos:
-$ brew install protobuf
-$ protoc --version
+# macos:
+brew install protobuf
+protoc --version
 
-# install protoc-gen-micro
+
+# 二、安装 generage
+# 选项-如果用 go-micro 框架的装
 git clone --depth=1 https://github.com/cute-angelia/protoc-gen-micro.git
 cd protoc-gen-micro && go install && cd -
 
-# install protoc-gen-go
+# 1. 推荐安装 gofast
+go get github.com/gogo/protobuf/protoc-gen-gofast
+
+# 2. 然后安装改造后支持gorm的库
 git clone --depth=1 https://github.com/cute-angelia/protobuf.git
 cd protobuf/protoc-gen-go && go install && cd -
 ```
 
+我的markfile文件分享
+
+```
+.PHONY: proto 
+proto:
+	@for d in proto; do \
+        echo ===================================== library ============================================; \
+		for f in $$d/**/*.proto; do \
+			protoc --proto_path=. --gofast_out=plugins=grpc:. $$f; \
+			echo compiled: $$f; \
+		done \
+	done
+```
 
 
-## make some fixed support gorm
+
+## 支持gorm做了哪些修改 - make some fixed support gorm
 
 all fixed code will taged , you can search word `fixed cyw` get there
 
-1. add tag `gorm`
-2. support pb2 with required,optional, and json will add `omitempty`
+1. 在结构体加了 gorm 的标签 add tag `gorm` and support pb2 with required,optional, and json will add `omitempty`
+2. 增加了一个方法 TableName
 
 something like this
 
@@ -66,6 +85,7 @@ type CampusModel struct {
 	XXX_unrecognized     []byte   `gorm:"-" json:"-"`
 	XXX_sizecache        int32    `gorm:"-" json:"-"`
 }
+
 ```
 
 ps:

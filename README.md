@@ -1,4 +1,4 @@
-配合 cute-angelia/mysql-protobuf 使用
+可以配合 cute-angelia/mysql-protobuf 使用更加方便，不用也没关系
 
 ## install
 

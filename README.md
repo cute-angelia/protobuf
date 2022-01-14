@@ -1,4 +1,4 @@
-> 可以配合 cute-angelia/mysql-protobuf 使用快速生成 proto文件，不用也没关系
+> 可以配合 [cute-angelia/mysql-protobuf](https://github.com/cute-angelia/mysql-protobuf) 使用快速生成 proto文件，不用也没关系
 
 ## 安装
 

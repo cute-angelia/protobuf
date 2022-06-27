@@ -20,7 +20,6 @@ go get github.com/gogo/protobuf/protoc-gen-gofast
 
 // go 版本1.17之后
 go install github.com/gogo/protobuf/protoc-gen-gofast@latest
-```
 
 # step2. 然后安装改造后支持gorm的库
 git clone --depth=1 https://github.com/cute-angelia/protobuf.git

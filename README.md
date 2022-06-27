@@ -12,17 +12,17 @@ protoc --version
 brew install protobuf
 protoc --version
 
-
 # 二、安装 generage
-# 1. 推荐安装 gofast
-```
+
+# step1. 推荐安装 gofast
+// go 版本1.17之前
 go get github.com/gogo/protobuf/protoc-gen-gofast
 
-# go 版本1.17之后
+// go 版本1.17之后
 go install github.com/gogo/protobuf/protoc-gen-gofast@latest
 ```
 
-# 2. 然后安装改造后支持gorm的库
+# step2. 然后安装改造后支持gorm的库
 git clone --depth=1 https://github.com/cute-angelia/protobuf.git
 cd protobuf/protoc-gen-go && go install && cd -
 ```

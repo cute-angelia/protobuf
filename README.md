@@ -14,17 +14,29 @@ protoc --version
 
 
 # 二、安装 generage
-# 选项-如果用 go-micro 框架的装
-git clone --depth=1 https://github.com/cute-angelia/protoc-gen-micro.git
-cd protoc-gen-micro && go install && cd -
-
 # 1. 推荐安装 gofast
+```
 go get github.com/gogo/protobuf/protoc-gen-gofast
+
+# go 版本1.17之后
+go install github.com/gogo/protobuf/protoc-gen-gofast@latest
+```
 
 # 2. 然后安装改造后支持gorm的库
 git clone --depth=1 https://github.com/cute-angelia/protobuf.git
 cd protobuf/protoc-gen-go && go install && cd -
 ```
+
+加入环境变量
+```
+export PATH=$PATH:$GOPATH/bin
+```
+
+
+其他：
+# 选项-如果用 go-micro 框架的装
+git clone --depth=1 https://github.com/cute-angelia/protoc-gen-micro.git
+cd protoc-gen-micro && go install && cd -
 
 我的markfile文件分享
 
